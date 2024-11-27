@@ -8,6 +8,8 @@ This project aims to test the functionality of the BBC homepage using Jetpack Co
 
 ### 1. **Tests Directory**
 - **HomepageTest.kt**: Contains the UI tests for the homepage. These tests interact with the UI and verify that the page behaves as expected.
+![image](https://github.com/user-attachments/assets/8993a978-af23-4a58-9662-e9bd4a4cef69)
+
 
 ### 2. **Helper Functions**
 - **ComposeActions.kt**: A utility file that defines helper functions for performing actions on the UI, such as clicking buttons, waiting for loading spinners, and refreshing the page.
