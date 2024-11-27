@@ -2,12 +2,12 @@
 
 ## Overview
 
-This project aims to test the functionality of the BBC homepage using Jetpack Compose UI testing. The test suite includes various tests to verify the correct behavior of the homepage, including interactions with UI elements like buttons, dropdown menus, and loading indicators. To make the tests more maintainable and reusable, helper functions provided as a part of assessment are used that separate UI actions (`ComposeActions`) and assertions (`ComposeAssertions`).
+This project aims to test the functionality of the BBC homepage using Jetpack Compose UI testing. The test suite includes various tests to verify the correct behavior of the homepage, including interactions with UI elements like buttons, dropdown menus, and loading indicators. To make the tests more maintainable and reusable, helper files provided as a part of assessment are used adding some additional functions, that separate UI actions (`ComposeActions`) and assertions (`ComposeAssertions`).
 
 ## Project Structure
 
 ### 1. **Tests Directory**
-- **HomepageTest.kt**: Contains the UI tests for the homepage. These tests interact with the UI and verify that the page behaves as expected. Running these test cases should provide results as below:
+- **HomepageTest.kt**: Contains the UI tests for the homepage and navigation. These tests interact with the UI and verify that the page behaves as expected. Running these test cases should provide results as below:
 ![image](https://github.com/user-attachments/assets/8993a978-af23-4a58-9662-e9bd4a4cef69)
 
 [Test+Simulation+in+Android.webm](https://github.com/user-attachments/assets/447c812f-3467-47e7-b691-3894436dc87b)
