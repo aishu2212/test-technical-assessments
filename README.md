@@ -128,6 +128,6 @@ To run the tests, use the Android Studio test runner or Gradle.
 3. Right-click on the test method and select **Run**.
 
 ### Using Gradle:
-Run the following command from the terminal:
+Run the following command from the terminal from ../test_technical_assessments/Android/ folder:
 ```bash
 ./gradlew connectedAndroidTest
