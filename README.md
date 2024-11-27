@@ -7,7 +7,7 @@ This project aims to test the functionality of the BBC homepage using Jetpack Co
 ## Project Structure
 
 ### 1. **Tests Directory**
-- **HomepageTest.kt**: Contains the UI tests for the homepage. These tests interact with the UI and verify that the page behaves as expected.
+- **HomepageTest.kt**: Contains the UI tests for the homepage. These tests interact with the UI and verify that the page behaves as expected. Running these test cases should provide results as below:
 ![image](https://github.com/user-attachments/assets/8993a978-af23-4a58-9662-e9bd4a4cef69)
 
 [Test+Simulation+in+Android.webm](https://github.com/user-attachments/assets/447c812f-3467-47e7-b691-3894436dc87b)
@@ -23,27 +23,51 @@ This project aims to test the functionality of the BBC homepage using Jetpack Co
 
 ### 1. **Adding Actions and Assertions**
 
-To keep your tests clean and reusable, all UI actions and assertions are abstracted into helper functions.
+To keep tests clean and reusable, all UI actions and assertions are abstracted into helper functions.
 
-#### **ComposeActions**:
+## ComposeAssertions
 
-Contains actions that interact with the UI. Some common actions are:
+- `isDisplayedWithTag(composeTestRule, testTag)`  
+  Asserts that the node with the specified test tag is displayed.
 
-- `performClickOnNodeWithTag(composeTestRule, tag)`: Performs a click on the node identified by the given test tag.
-- `performClickOnNodeWithText(composeTestRule, text)`: Performs a click on the node identified by the given text.
-- `scrollToNodeWithText(composeTestRule, text)`: Scrolls to a node containing the specified text.
-- `performClickOnNodeWithTag(composeTestRule, testTag)`: Performs a click on the node with the specified test tag.
-- `scrollTo(composeTestRule, testTag)`: Scrolls the view until the element with the specified tag is visible.
+- `isDisplayedWithText(composeTestRule, text)`  
+  Asserts that the node with the specified text is displayed.
 
-#### **ComposeAssertions**:
+- `isNotDisplayedWithText(composeTestRule, text)`  
+  Asserts that the node with the specified text is not displayed.
 
-Contains assertions for verifying UI elements' state. Some common assertions are:
+- `assertNodeCountWithContentDescription(composeTestRule, text, expectedCount)`  
+  Asserts the number of nodes with the given content description matches the expected count.
 
-- `isDisplayed(composeTestRule, tag)`: Asserts that the node with the specified test tag is displayed.
-- `assertNodeExistsWithText(composeTestRule, text)`: Asserts that the node with the specified text exists.
-- `doesNotExist(composeTestRule, tag)`: Asserts that the node with the specified tag does not exist.
-- `assertNodeCountWithText(composeTestRule, text, count)`: Asserts that there are a specific number of nodes with the given text.
-- `assertIsDisplayed(composeTestRule, tag)`: Asserts that the node with the specified tag is displayed.
+- `doesNotExist(composeTestRule, testTag)`  
+  Asserts that the node with the specified test tag does not exist.
+
+- `assertNodeExistsWithText(composeTestRule, text, substring, ignoreCase)`  
+  Asserts that the node with the specified text exists, with optional substring and case-insensitive matching.
+
+- `assertNodeCountWithText(composeTestRule, text, expectedCount)`  
+  Asserts the number of nodes with the specified text matches the expected count.
+
+- `assertLastUpdatedTimeIsCorrect(composeTestRule, tag, dateRegex)`  
+  Asserts that the 'Last updated' time matches the given regex pattern.
+
+- `assertLastUpdatedTimeHasChanged(composeTestRule, tag, initialTimeText, dateRegex)`  
+  Asserts that the 'Last updated' time has changed after a refresh and matches the given regex pattern.
+
+## ComposeActions
+
+- `performClickOnNodeWithTag(composeTestRule, testTag)`  
+  Performs a click on the node identified by the given test tag.
+
+- `performClickOnNodeWithText(composeTestRule, testTag)`  
+  Performs a click on the node containing the specified text.
+
+- `waitForLoadingSpinnerToDisappear(composeTestRule, tag, timeoutMillis)`  
+  Waits until the loading spinner disappears or the timeout is reached.
+
+- `scrollToNodeWithText(composeTestRule, text, substring, ignoreCase)`  
+  Scrolls to the node containing the specified text.
+
 
 ---
 
